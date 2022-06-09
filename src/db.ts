@@ -2,14 +2,14 @@
 import {DataSource} from 'typeorm';
 
 //typeorm config
-const AppDataSource = new DataSource({
+export const AppDataSource = new DataSource({
     type: "postgres",
     host: "localhost",
     port: 5432,
-    username: "admin",
+    username: "postgres",
     password: "admin",
-    database: "test",
+    database: "typeormdb",
     entities: [],
     synchronize: true,
-    logging: false,
+    logging: true,// information log
 })
