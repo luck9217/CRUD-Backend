@@ -1,5 +1,6 @@
 
 import {DataSource} from 'typeorm';
+import { User } from "./entities/user";
 
 //typeorm config
 export const AppDataSource = new DataSource({
@@ -9,7 +10,7 @@ export const AppDataSource = new DataSource({
     username: "postgres",
     password: "admin",
     database: "typeormdb",
-    entities: [],
-    synchronize: true,
+    entities: [User],
+    synchronize: true, //review changes and upload
     logging: true,// information log
 })
